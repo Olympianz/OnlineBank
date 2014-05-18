@@ -21,8 +21,18 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
+	
+	
+	<!-- Data source -->
+	<beans:bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" >
+		<beans:property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
+		<beans:property name="url" 
+			value="jdbc:oracle:thin:@oracle-rds.cyumie0lna8h.us-west-2.rds.amazonaws.com:1521:mydb" />
+		<beans:property name="username" value="oracle_user" />
+		<beans:property name="password" value="cogent123" />
+		<beans:property name="maxActive" value="10" />
+	</beans:bean>
+	
 	<context:component-scan base-package="com.cogent.banking" />
-	
-	
 	
 </beans:beans>
