@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.cogent</groupId>
 	<artifactId>banking</artifactId>
-	<name>WebBanking</name>
+	<name>OnlineBank</name>
 	<packaging>war</packaging>
 	<version>1.0.0-BUILD-SNAPSHOT</version>
 	<properties>
