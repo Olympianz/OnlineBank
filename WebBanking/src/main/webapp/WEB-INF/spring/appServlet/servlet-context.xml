@@ -33,6 +33,24 @@
 		<beans:property name="maxActive" value="10" />
 	</beans:bean>
 	
+	<!-- Hibernate Session Factory -->
+	<beans:bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<beans:property name="dataSource" ref="dataSource" />
+		<beans:property name="mappingResources">
+			<beans:list>
+				<beans:value>bank.hbm.xml</beans:value>			
+			</beans:list>
+		</beans:property>
+		<beans:property name="hibernateProperties">
+			<beans:value>
+                hibernate.dialect=org.hibernate.dialect.OracleDialect
+            </beans:value>		
+        </beans:property>
+	</beans:bean>
+	
+	
+	
 	<context:component-scan base-package="com.cogent.banking" />
 	
 </beans:beans>
